@@ -15,20 +15,33 @@ const getRandomUser = async () => {
     // console.log(e.login.username);
     const usersId = e.login.uuid;
     const splitId = usersId.split('-');
-    // console.log(splitId[0]);
+
     const str1 = '@';
     const str2 = str1.concat(splitId[0]);
-    console.log(str2);
-    console.log(e.login.username);
+    // console.log(str2);
+    // console.log(e.login.username);
 
     // Create Json objects
-    let users = [];
+    myArray = [];
+    users.forEach((e) => {
+      const usersId = e.login.uuid;
+      const splitId = usersId.split('-');
+
+      const str1 = '@';
+      const str2 = str1.concat(splitId[0]);
+      myArray.push({
+        userId: `${str2}`,
+        name: `${e.login.username}`,
+      });
+    });
   });
+  //   console.log(myArray);
+  return myArray;
 };
 
 // GetRandomPosts
 const getRandomPosts = async () => {
-  getRandomUser();
+  userInfo = await getRandomUser();
   const postsRes = await fetch('https://jsonplaceholder.typicode.com/posts');
   const postsData = await postsRes.json();
 
@@ -37,9 +50,10 @@ const getRandomPosts = async () => {
   for (let i = 0; i < 10; i++) {
     posts.push(postsData[i]);
   }
-  console.log(posts);
 
   // Make userPosts Array
+  console.log(userInfo);
+  console.log(posts);
 };
 
 // Post Article
