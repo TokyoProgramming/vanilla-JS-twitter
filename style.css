@@ -13,7 +13,7 @@ body {
 
 .container {
   display: flex;
-  /* height: 100vh; */
+
   width: 100vw;
   background-color: #192734;
 }
@@ -160,6 +160,25 @@ body {
   cursor: pointer;
 }
 
+.user-inf {
+  display: flex;
+}
+
+.user-name {
+  padding: 5px;
+  margin-top: 10px;
+  margin-right: auto;
+}
+
+.user-id {
+  margin-left: auto;
+  margin-right: 20px;
+  color: #66757f;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
 .post-card > img {
   padding: 5px;
   margin: 10px 10px;
@@ -174,10 +193,7 @@ body {
 .post-inf {
   display: flex;
   flex-direction: column;
-}
-.post-inf h3 {
-  padding: 5px;
-  margin-top: 10px;
+  text-align: center;
 }
 
 .post-icons {
