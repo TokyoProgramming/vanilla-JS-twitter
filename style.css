@@ -3,10 +3,17 @@
   padding: 0;
   margin: 0;
 }
+html,
+body {
+  height: 100%;
+  background-color: #192734;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
 
 .container {
   display: flex;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   background-color: #192734;
 }
@@ -18,10 +25,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 .sidebar-left h1 {
-  color: #fff;
+  color: #f2ffff;
 }
+
 .sidebar-right {
   margin-right: 10%;
   flex: 0.2;
@@ -30,10 +39,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .sidebar-right h1 {
-  color: #fff;
+  color: #f2ffff;
 }
 
 .main {
@@ -43,9 +53,24 @@
   align-items: center;
   position: relative;
 }
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #15202a;
+}
 .main h1 {
-  color: #fff;
+  color: #f2ffff;
   padding: 10px;
+}
+.main h3 {
+  width: fit-content;
+}
+
+.main h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .user-card {
@@ -78,9 +103,11 @@
 .user-form > input {
   border: none;
   width: 100%;
+  margin-top: 10px;
   background-color: #15202c;
   padding: 10px;
-  color: #fff;
+  color: #f2ffff;
+  font-size: 20px;
 }
 .user-form > input:focus {
   outline-width: 0;
@@ -95,9 +122,11 @@
   height: 100%;
 }
 
-.user-icons > button {
+.user-button {
   border: none;
-  background-color: #2f91da;
+  background-color: #20608f;
+  opacity: 0.8;
+
   color: #fff;
 
   width: 80px;
@@ -108,6 +137,12 @@
   margin-left: auto;
   cursor: pointer;
 }
+
+.user-button.active {
+  background-color: #35a1f2;
+  opacity: 1;
+}
+
 .user-icons > button:focus {
   outline-width: 0;
 }
@@ -118,8 +153,13 @@
   padding: 10px;
   border-bottom: 1px solid #38444e;
   display: flex;
-  color: #fff;
+  color: #f2ffff;
 }
+.post-card:hover {
+  background-color: #1c2733;
+  cursor: pointer;
+}
+
 .post-card > img {
   padding: 5px;
   margin: 10px 10px;
@@ -138,4 +178,13 @@
 .post-inf h3 {
   padding: 5px;
   margin-top: 10px;
+}
+
+.post-icons {
+  display: flex;
+  margin-top: 10px;
+  padding: 5px;
+  justify-content: space-between;
+  margin-right: 20px;
+  cursor: pointer;
 }

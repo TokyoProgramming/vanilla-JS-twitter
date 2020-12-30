@@ -4,15 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <title>Array method</title>
   </head>
   <body>
     <div class="container">
       <div class="sidebar-left">
-        <h1>sidebar Left</h1>
+        <!-- <h1>sidebar Left</h1> -->
       </div>
       <div class="main">
-        <h1>home</h1>
+        <div class="header">
+          <h1>home</h1>
+        </div>
+
         <div class="user-card">
           <img
             alt=""
@@ -21,7 +30,11 @@
           />
 
           <form class="user-form" id="user-form">
-            <input type="text" placeholder="What's happening? " />
+            <input
+              type="text"
+              placeholder="What's happening? "
+              id="inputPost"
+            />
 
             <div class="user-icons">
               <button class="user-button" id="user-button">Post</button>
@@ -42,13 +55,136 @@
               maxime quod voluptatum in consectetur quibusdam iusto enim
               architecto, explicabo soluta rem animi cumque incidunt porro
               officiis reprehenderit modi aspernatur est?
+              <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-redo-alt"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-save"></i>
+              </div>
             </div>
           </div>
-          <div class="post-icons"></div>
         </div>
+
+        <!-- multiple posts -->
+        <div class="post-card">
+          <img
+            alt=""
+            draggable="true"
+            src="https://pbs.twimg.com/profile_images/1255440558056751106/8N4uJ4dg_200x200.jpg"
+            class="css-9pa8cd"
+          />
+          <div class="post-inf">
+            <h3 class="user-name">user1</h3>
+            <div class="post">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              maxime quod voluptatum in consectetur quibusdam iusto enim
+              architecto, explicabo soluta rem animi cumque incidunt porro
+              officiis reprehenderit modi aspernatur est?
+              <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-redo-alt"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-save"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <img
+            alt=""
+            draggable="true"
+            src="https://pbs.twimg.com/profile_images/1255440558056751106/8N4uJ4dg_200x200.jpg"
+            class="css-9pa8cd"
+          />
+          <div class="post-inf">
+            <h3 class="user-name">user1</h3>
+            <div class="post">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              maxime quod voluptatum in consectetur quibusdam iusto enim
+              architecto, explicabo soluta rem animi cumque incidunt porro
+              officiis reprehenderit modi aspernatur est?
+              <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-redo-alt"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-save"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <img
+            alt=""
+            draggable="true"
+            src="https://pbs.twimg.com/profile_images/1255440558056751106/8N4uJ4dg_200x200.jpg"
+            class="css-9pa8cd"
+          />
+          <div class="post-inf">
+            <h3 class="user-name">user1</h3>
+            <div class="post">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              maxime quod voluptatum in consectetur quibusdam iusto enim
+              architecto, explicabo soluta rem animi cumque incidunt porro
+              officiis reprehenderit modi aspernatur est?
+              <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-redo-alt"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-save"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <img
+            alt=""
+            draggable="true"
+            src="https://pbs.twimg.com/profile_images/1255440558056751106/8N4uJ4dg_200x200.jpg"
+            class="css-9pa8cd"
+          />
+          <div class="post-inf">
+            <h3 class="user-name">user1</h3>
+            <div class="post">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              maxime quod voluptatum in consectetur quibusdam iusto enim
+              architecto, explicabo soluta rem animi cumque incidunt porro
+              officiis reprehenderit modi aspernatur est?
+              <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-redo-alt"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-save"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <img
+            alt=""
+            draggable="true"
+            src="https://pbs.twimg.com/profile_images/1255440558056751106/8N4uJ4dg_200x200.jpg"
+            class="css-9pa8cd"
+          />
+          <div class="post-inf">
+            <h3 class="user-name">user1</h3>
+            <div class="post">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+              maxime quod voluptatum in consectetur quibusdam iusto enim
+              architecto, explicabo soluta rem animi cumque incidunt porro
+              officiis reprehenderit modi aspernatur est?
+              <div class="post-icons">
+                <i class="far fa-comment"></i>
+                <i class="fas fa-redo-alt"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-save"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end -->
       </div>
       <div class="sidebar-right">
-        <h1>sidebar Right</h1>
+        <!-- <h1>sidebar Right</h1> -->
       </div>
     </div>
     <script src="script.js"></script>
