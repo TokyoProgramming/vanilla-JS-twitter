@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #192734;
+}
+.sidebar-left {
+  margin-left: 10%;
+  flex: 0.2;
+  border-right: 1px solid #38444e;
+  border-left: 1px solid #38444e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar-left h1 {
+  color: #fff;
+}
+.sidebar-right {
+  margin-right: 10%;
+  flex: 0.2;
+  border-left: 1px solid #38444e;
+  border-right: 1px solid #38444e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-right h1 {
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  flex: 0.6;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.main h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.user-card {
+  display: flex;
+  padding: 10px;
+
+  position: relative;
+  border: 1px solid #38444e;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #15202c;
+}
+.user-card img {
+  display: block;
+  padding: 5px;
+  margin: 10px 10px;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user-form > input {
+  border: none;
+  width: 100%;
+  background-color: #15202c;
+  padding: 10px;
+  color: #fff;
+}
+.user-form > input:focus {
+  outline-width: 0;
+}
+.user-icons {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+
+  border-top: solid 1px #38444e;
+
+  height: 100%;
+}
+
+.user-icons > button {
+  border: none;
+  background-color: #2f91da;
+  color: #fff;
+
+  width: 80px;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 10px;
+
+  margin-left: auto;
+  cursor: pointer;
+}
+.user-icons > button:focus {
+  outline-width: 0;
+}
+
+.post-card {
+  border-top: 1px solid #38444e;
+  background-color: #15202c;
+  padding: 10px;
+  border-bottom: 1px solid #38444e;
+  display: flex;
+  color: #fff;
+}
+.post-card > img {
+  padding: 5px;
+  margin: 10px 10px;
+  display: block;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.post-inf {
+  display: flex;
+  flex-direction: column;
+}
+.post-inf h3 {
+  padding: 5px;
+  margin-top: 10px;
+}
