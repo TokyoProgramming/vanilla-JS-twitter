@@ -52,8 +52,23 @@ const getRandomPosts = async () => {
   }
 
   // Make userPosts Array
-  console.log(userInfo);
-  console.log(posts);
+  //   console.log(userInfo);
+
+  //   console.log(posts);
+  let arr3 = [];
+
+  for (let i = 0; i < 10; i++) {
+    const id = userInfo[i].userId;
+    const name = userInfo[i].name;
+    const title = posts[i].title;
+
+    arr3.push({
+      id,
+      name,
+      title,
+    });
+  }
+  console.log(arr3);
 };
 
 // Post Article
