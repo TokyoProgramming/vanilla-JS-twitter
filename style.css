@@ -80,11 +80,9 @@ body {
 .user-card {
   display: flex;
   padding: 10px;
-
   border: 1px solid #38444e;
   margin-bottom: 10px;
   width: 100%;
-
   background-color: #15202c;
 }
 .user-card img {
@@ -145,7 +143,9 @@ body {
 .user-icons > button:focus {
   outline-width: 0;
 }
-
+.postCard {
+  width: 100%;
+}
 .post-card {
   border-top: 1px solid #38444e;
   background-color: #15202c;
@@ -154,7 +154,6 @@ body {
   display: flex;
   color: #f2ffff;
   width: 100%;
-  /* white-space: pre-wrap; */
 }
 .post-card:hover {
   background-color: #1c2733;
@@ -211,5 +210,7 @@ body {
   padding: 5px;
   justify-content: space-between;
   margin-right: 20px;
-  cursor: pointer;
+}
+
+.post-icons i:hover {
 }
