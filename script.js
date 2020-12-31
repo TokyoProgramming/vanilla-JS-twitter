@@ -2,6 +2,7 @@ const postForm = document.querySelector('.user-form');
 const postArticle = document.getElementById('inputPost');
 const postButton = document.getElementById('user-button');
 const btn = document.getElementById('user-button');
+const main = document.querySelector('.main');
 
 let posts = [];
 
@@ -11,31 +12,23 @@ const getRandomUser = async () => {
   const usersData = await usersRes.json();
 
   users = usersData.results;
+
+  // Create Json objects
+  myArray = [];
   users.forEach((e) => {
-    // console.log(e.login.username);
     const usersId = e.login.uuid;
     const splitId = usersId.split('-');
 
     const str1 = '@';
     const str2 = str1.concat(splitId[0]);
-    // console.log(str2);
-    // console.log(e.login.username);
-
-    // Create Json objects
-    myArray = [];
-    users.forEach((e) => {
-      const usersId = e.login.uuid;
-      const splitId = usersId.split('-');
-
-      const str1 = '@';
-      const str2 = str1.concat(splitId[0]);
-      myArray.push({
-        userId: `${str2}`,
-        name: `${e.login.username}`,
-      });
+    myArray.push({
+      userId: `${str2}`,
+      name: `${e.login.username}`,
+      userPic: `${e.picture.large}`,
     });
   });
-  //   console.log(myArray);
+  console.log(myArray);
+
   return myArray;
 };
 
@@ -52,32 +45,88 @@ const getRandomPosts = async () => {
   }
 
   // Make userPosts Array
-  //   console.log(userInfo);
-
-  //   console.log(posts);
-  let arr3 = [];
+  let userPostsArray = [];
 
   for (let i = 0; i < 10; i++) {
     const id = userInfo[i].userId;
     const name = userInfo[i].name;
-    const title = posts[i].title;
+    const post = posts[i].body;
+    const userPic = userInfo[i].userPic;
 
-    arr3.push({
+    userPostsArray.push({
       id,
       name,
-      title,
+      post,
+      userPic,
     });
   }
-  console.log(arr3);
+
+  //   show userPots
+  userPostsArray.forEach((e) => {
+    // Create PostCardDiv
+    const postCardDiv = document.createElement('div');
+    postCardDiv.classList.add('post-card');
+    // Add Image
+    const postImage = document.createElement('img');
+    postImage.src = `${e.userPic}`;
+    postCardDiv.appendChild(postImage);
+    // Create PostInfDiv
+    const postInfDiv = document.createElement('div');
+    postInfDiv.classList.add('post-inf');
+    // create user-inf div
+    const userInfDiv = document.createElement('div');
+    userInfDiv.classList.add('user-inf');
+    // create h3
+    const postInfH3 = document.createElement('h3');
+    postInfH3.classList.add('user-name');
+    // h3 InnerText UserName
+    postInfH3.innerText = `${e.name}`;
+    // create h5
+    const postInfH5 = document.createElement('h5');
+    postInfH5.classList.add('user-id');
+    // h5 InnerText UserID
+    postInfH5.innerText = `${e.id}`;
+
+    userInfDiv.appendChild(postInfH3);
+    userInfDiv.appendChild(postInfH5);
+    postInfDiv.appendChild(userInfDiv);
+
+    // Create Post Div
+    const postInfPostDiv = document.createElement('div');
+    postInfPostDiv.classList.add('post');
+    // Create Post P
+    const postInfP = document.createElement('p');
+    // post InnerText Post
+    postInfP.innerText = `${e.post}`;
+    // Append PostInfP to post Div
+    postInfPostDiv.appendChild(postInfP);
+
+    const postInfPostIconsDiv = document.createElement('div');
+    postInfPostIconsDiv.classList.add('post-icons');
+    postInfPostIconsDiv.innerHTML = `                <i class="far fa-comment"></i>
+	<i class="fas fa-redo-alt"></i>
+	<i class="far fa-heart"></i>
+	<i class="far fa-save"></i>`;
+
+    postInfPostDiv.appendChild(postInfPostIconsDiv);
+
+    postInfDiv.appendChild(postInfPostDiv);
+    postCardDiv.appendChild(postInfDiv);
+
+    main.appendChild(postCardDiv);
+  });
+  //   console.log(mainDiv);
 };
 
 // Post Article
 const postBtn = (e) => {
   e.preventDefault();
+
   const article = postArticle.value;
 
   posts.push(article);
   console.log(article);
+
   postArticle.value = '';
 };
 

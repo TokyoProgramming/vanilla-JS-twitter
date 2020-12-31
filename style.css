@@ -13,9 +13,8 @@ body {
 
 .container {
   display: flex;
-
-  width: 100vw;
   background-color: #192734;
+  width: 100vw;
 }
 .sidebar-left {
   margin-left: 10%;
@@ -26,6 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100%;
 }
 .sidebar-left h1 {
   color: #f2ffff;
@@ -40,6 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100%;
 }
 
 .sidebar-right h1 {
@@ -49,10 +50,12 @@ body {
 .main {
   display: flex;
   flex: 0.6;
+
   flex-direction: column;
   align-items: center;
   position: relative;
 }
+
 .header {
   position: sticky;
   top: 0;
@@ -60,6 +63,7 @@ body {
   z-index: 1;
   background-color: #15202a;
 }
+
 .main h1 {
   color: #f2ffff;
   padding: 10px;
@@ -77,10 +81,10 @@ body {
   display: flex;
   padding: 10px;
 
-  position: relative;
   border: 1px solid #38444e;
   margin-bottom: 10px;
   width: 100%;
+
   background-color: #15202c;
 }
 .user-card img {
@@ -116,9 +120,7 @@ body {
   margin-top: 40px;
   display: flex;
   align-items: center;
-
   border-top: solid 1px #38444e;
-
   height: 100%;
 }
 
@@ -126,14 +128,11 @@ body {
   border: none;
   background-color: #20608f;
   opacity: 0.8;
-
   color: #fff;
-
   width: 80px;
   height: 40px;
   border-radius: 30px;
   margin-top: 10px;
-
   margin-left: auto;
   cursor: pointer;
 }
@@ -154,10 +153,19 @@ body {
   border-bottom: 1px solid #38444e;
   display: flex;
   color: #f2ffff;
+  width: 100%;
+  /* white-space: pre-wrap; */
 }
 .post-card:hover {
   background-color: #1c2733;
   cursor: pointer;
+}
+
+.post {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: left;
 }
 
 .user-inf {
@@ -194,6 +202,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 100%;
 }
 
 .post-icons {
